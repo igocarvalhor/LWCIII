@@ -1,0 +1,42 @@
+<template>
+    <div class="slds-m-around_medium">
+        <lightning-card title="Formulário">
+            <div class="slds-grid slds-wrap">
+                <div class="slds-col slds-size_1-of-2">
+                    <lightning-input label="Primeiro Nome" onchange={handleInputChange} data-field="primeironome"></lightning-input>
+                </div>
+                <div class="slds-col slds-size_1-of-2">
+                    <lightning-input label="Sobrenome" onchange={handleInputChange} data-field="sobrenome"></lightning-input>
+                </div>
+                <div class="slds-col slds-size_1-of-2">
+                    <lightning-input label="Email" onchange={handleInputChange} data-field="email"></lightning-input>
+                </div>
+                <div class="slds-col slds-size_1-of-2">
+                    <lightning-input label="Website" onchange={handleInputChange} data-field="website"></lightning-input>
+                </div>
+                <div class="slds-col slds-size_1-of-2">
+                    <lightning-input label="Empresa" onchange={handleInputChange} data-field="empresa"></lightning-input>
+                </div>
+                <div class="slds-col slds-size_1-of-2">
+                    <lightning-input label="Receita Anual" onchange={handleInputChange} data-field="receitaanual"></lightning-input>
+                </div>
+            </div>
+        </lightning-card>
+
+        <lightning-card title="Contato Estruturado">
+            <template if:true={contact}>
+                <div class="slds-grid slds-wrap">
+                    <div class="slds-col slds-size_1-of-2">
+                        <p><b>Nome:</b> {contact.Name}</p>
+                        <p><b>Email:</b> {contact.Email}</p>
+                        <p><b>Website:</b> {contact.Website}</p>
+                    </div>
+                    <div class="slds-col slds-size_1-of-2">
+                        <p><b>Empresa:</b> {contact.Empresa}</p>
+                        <p><b>Receita Anual:</b> {contact.ReceitaAnual}</p>
+                    </div>
+                </div>
+            </template>
+        </lightning-card>
+    </div>
+</template>
